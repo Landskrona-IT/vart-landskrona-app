@@ -1,4 +1,4 @@
-# Ett bättre Helsingborg - App
+# Vårt Landskrona - App
 
 ## Table of Contents
 - [About](#about)
@@ -22,8 +22,8 @@ Before you begin using the app, make sure you have the following prerequisites:
 - Expo CLI (install using `npm install -g expo-cli`)
 
 ## Installation
-1. Clone this repository: `git clone https://github.com/helsingborg-stad/ett-battre-helsingborg-app.git`
-2. Navigate to the app directory: `cd ett-battre-helsingborg-app`
+1. Clone this repository: `git clone git@github.com:Landskrona-IT/vart-landskrona-app.git`
+2. Navigate to the app directory: `cd vart-landskrona-app`
 3. Install dependencies: `npm install`
 
 ## Usage
