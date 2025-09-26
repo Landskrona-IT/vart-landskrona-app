@@ -7,11 +7,6 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#FDDDE5"
-    },
     "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
@@ -32,7 +27,7 @@
       ],
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FDDDE5"
+        "backgroundColor": "#134F63"
       },
       "package": "se.landskrona.VartLandskrona"
     },
@@ -44,6 +39,14 @@
         "projectId": "db5f87e0-9ae7-49af-a7c2-a9da90f0db27"
       }
     },
-    "plugins": ["expo-font"]
+    "plugins": ["expo-font",
+        ["expo-splash-screen",
+        {
+          "backgroundColor": "#134F63",
+          "image": "./assets/splash.png",
+          "imageWidth": 200
+        }
+      ]
+    ]
   }
 }

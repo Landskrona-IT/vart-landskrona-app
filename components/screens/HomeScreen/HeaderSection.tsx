@@ -4,7 +4,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import DisturbanceAlert from './DisturbanceAlert';
 
-const image = require('../../../assets/images/home_screen_bg.png');
+const image = require('../../../assets/images/home_screen_bg.webp');
 
 const HeaderSection: React.FC = () => {
   const insets = useSafeAreaInsets();
