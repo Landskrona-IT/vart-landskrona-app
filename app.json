@@ -27,7 +27,7 @@
       ],
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#134F63"
+        "backgroundColor": "#0e5873"
       },
       "package": "se.landskrona.VartLandskrona"
     },
@@ -42,7 +42,7 @@
     "plugins": ["expo-font",
         ["expo-splash-screen",
         {
-          "backgroundColor": "#134F63",
+          "backgroundColor": "#0e5873",
           "image": "./assets/splash.png",
           "imageWidth": 200
         }

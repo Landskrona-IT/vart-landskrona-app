@@ -3,16 +3,16 @@ import { View, StyleSheet } from 'react-native';
 
 interface ContainerProps {
   children: ReactNode;
+  background?: string;
 }
 
-const Container = ({ children }: ContainerProps) => {
-  return <View style={styles.container}>{children}</View>;
+const Container = ({ children, background = '#0e5873' }: ContainerProps) => {
+  return <View style={{...styles.container, backgroundColor: background}}>{children}</View>;
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#FFF8FA',
   },
 });
 

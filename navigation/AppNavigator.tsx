@@ -1,7 +1,7 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { getHeaderTitle } from '@react-navigation/elements';
 import { NavigationContainer } from '@react-navigation/native';
-import React from 'react';
+import React, { JSX } from 'react';
 
 import Header from '../components/screens/FormScreen/Header';
 import { useWebView } from '../components/screens/FormScreen/WebView/WebViewContext';
@@ -18,6 +18,7 @@ const AppNavigator = (): JSX.Element => {
   return (
     <NavigationContainer>
       <Tab.Navigator
+        id={undefined}
         initialRouteName="Home"
         screenOptions={{
           tabBarStyle: { display: 'none' },
@@ -26,7 +27,12 @@ const AppNavigator = (): JSX.Element => {
           name="Home"
           component={Home}
           options={{
-            headerShown: false,
+            headerStyle: {
+              backgroundColor: '#0e5873',
+            },
+            header: () => {
+              return <Header logo='text-image' showClosePress={false} />
+            }
           }}
         />
         <Tab.Screen
@@ -39,15 +45,12 @@ const AppNavigator = (): JSX.Element => {
               const title = getHeaderTitle(options, route.name);
               return (
                 <Header
-                  title={""}
+                  title=''
+                  logo='text'
                   handleClosePress={() => {
                     reloadWebView();
                     navigation.navigate('Home');
                   }}
-                  handlePreviousPress={() => {
-                    navigatePreviousStep(webViewRef);
-                  }}
-                  showPreviousPress={currentStep !== 0 && isSubmitted === false}
                 />
               );
             },

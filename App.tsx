@@ -11,6 +11,11 @@ SplashScreen.preventAutoHideAsync();
 
 const App: React.FC = () => {
   const [fontsLoaded] = useFonts({
+    'Ciutadella-SemiBold': require('./assets/fonts/ciutadella/Ciutadella SemiBold.ttf'),
+    'Ciutadella-Medium': require('./assets/fonts/ciutadella/Ciutadella Medium.ttf'),
+    'Ciutadella-Regular': require('./assets/fonts/ciutadella/Ciutadella Regular.ttf'),
+    'Ciutadella-Light': require('./assets/fonts/ciutadella/Ciutadella Light.ttf'),
+
     'Helsingborg-Sans-Light': require('./assets/fonts/helsingborg_sans/OTF/HelsingborgSans-Light.otf'),
     'Helsingborg-Sans-Regular': require('./assets/fonts/helsingborg_sans/OTF/HelsingborgSans-Regular.otf'),
     'Helsingborg-Sans-Medium': require('./assets/fonts/helsingborg_sans/OTF/HelsingborgSans-Medium.otf'),
