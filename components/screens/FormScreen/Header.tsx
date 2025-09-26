@@ -1,21 +1,18 @@
-import Ionicons from '@expo/vector-icons/Ionicons';
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, Alert } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, Alert, Image } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
+import LogoText from '../../../assets/logo_text.svg';
+import Landskrona from '../../../assets/landskrona.png';
+
 interface HeaderProps {
-  title: string;
-  handleClosePress(): void;
-  handlePreviousPress(): void;
-  showPreviousPress?: boolean;
+  title?: string;
+  logo: 'text' | 'text-image';
+  handleClosePress?(): void;
+  showClosePress?: boolean;
 }
 
-const Header: React.FC<HeaderProps> = ({
-  title,
-  handleClosePress,
-  handlePreviousPress,
-  showPreviousPress = true,
-}) => {
+const Header: React.FC<HeaderProps> = ({ title = '', logo = 'text', handleClosePress, showClosePress = true }) => {
   const insets = useSafeAreaInsets();
 
   const showExitAlert = () => {
@@ -25,7 +22,7 @@ const Header: React.FC<HeaderProps> = ({
       [
         {
           text: "Avbryt",
-          "style": "cancel"
+          style: "cancel"
         },
         {
           text: "OK",
@@ -33,47 +30,45 @@ const Header: React.FC<HeaderProps> = ({
         }
       ]
     );
-  }
+  };
+
+  const renderLogo = () => {
+    if (logo === 'text') {
+      return <Image source={Landskrona} style={styles.image} resizeMode="contain" />;
+    }
+    return <LogoText />
+  };
 
   return (
-    <View style={{ paddingTop: insets.top }}>
+    <View style={{ ...styles.container, paddingTop: insets.top }}>
       <View style={styles.header}>
-        <View style={styles.backButtonContainer}>
-          {showPreviousPress ? (
-            <TouchableOpacity onPress={handlePreviousPress} style={styles.button}>
-              <Ionicons name="chevron-back-outline" size={24} color="#000" />
-              <Text style={styles.buttonText}>Tillbaka</Text>
-            </TouchableOpacity>
-          ) : (
-            <View style={styles.placeholder} />
-          )}
-        </View>
-
-        <Text style={styles.title}>{title}</Text>
-        <TouchableOpacity onPress={showExitAlert} style={styles.button}>
-          <Text style={styles.buttonText}>Avbryt</Text>
-        </TouchableOpacity>
+        {renderLogo()}
+        {showClosePress && (
+          <TouchableOpacity onPress={showExitAlert} style={styles.button}>
+            <Text style={styles.buttonText}>Avbryt</Text>
+          </TouchableOpacity>
+        )}
       </View>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  safeArea: {
-    backgroundColor: '#FAFAFA',
+  container: {
+    backgroundColor: '#0e5873',
   },
   header: {
+    width: '100%',
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
     paddingHorizontal: 16,
-    height: 60,
-    borderBottomWidth: StyleSheet.hairlineWidth,
-    borderBottomColor: '#8E8E8E',
+    paddingBottom: 15,
+    height: 65,
   },
-  title: {
-    fontFamily: 'Roboto-Regular',
-    fontSize: 18,
+  image: {
+    width: 137,
+    height: 12,
   },
   button: {
     width: 80,
@@ -85,17 +80,7 @@ const styles = StyleSheet.create({
   buttonText: {
     fontFamily: 'Roboto-Regular',
     fontSize: 18,
-  },
-  placeholder: {
-    width: 40,
-    height: 40,
-    padding: 8,
-  },
-  backButtonContainer: {
-    width: 80,
-    height: 40,
-    justifyContent: 'center', // Center the content vertically
-    alignItems: 'center', // Center the content horizontally
+    color: 'white',
   },
 });
 

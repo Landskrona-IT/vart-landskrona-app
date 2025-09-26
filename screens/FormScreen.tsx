@@ -8,7 +8,7 @@ import { HomeScreenNavigationProps } from '../types/Types';
 
 const FormScreen: React.FC<HomeScreenNavigationProps> = ({ navigation }) => {
   return (
-    <Container>
+    <Container background={"#F4F0E9"}>
       <WebView url={process.env.EXPO_PUBLIC_WEBVIEW_URL} />
       <FormNavigation navigation={navigation} />
       <FocusAwareStatusBar style="dark" backgroundColor="transparent" />
