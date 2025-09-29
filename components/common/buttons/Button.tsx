@@ -29,8 +29,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#63a0b7',
   },
   label: {
-    fontFamily: 'Roboto-Medium',
-    fontSize: 17,
+    fontFamily: 'Ciutadella-SemiBold',
+    fontSize: 18,
     color: '#fff',
   },
 });
