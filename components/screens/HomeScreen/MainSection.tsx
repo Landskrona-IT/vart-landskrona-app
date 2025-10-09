@@ -6,7 +6,8 @@ const MainSection = ({ navigation }) => {
   return (
     <View style={styles.wrapper}>
       <View style={styles.card}>
-        <Text style={styles.title}>Lämna en felanmälan eller synpunkt</Text>
+        <Text style={styles.title}>Välkommen till Vårt Landskrona</Text>
+        <Text style={styles.subtitle}>Lämna en felanmälan eller synpunkt</Text>
         <Text style={styles.description}>Hjälp oss att hålla staden hel och ren.</Text>
         <Button onPress={() => navigation.navigate('Form')} label="Skapa ett ärende" />
       </View>
@@ -19,7 +20,7 @@ const styles = StyleSheet.create({
     flex: 2,
     justifyContent: 'center',
     alignItems: 'center',
-    padding: 24,
+    padding: 26,
     backgroundColor: '#D9F0F4',
   },
 
@@ -30,16 +31,23 @@ const styles = StyleSheet.create({
 
   title: {
     fontFamily: 'Ciutadella-SemiBold',
-    fontSize: 28,
+    fontSize: 23,
     color: '#0e5873',
     textAlign: 'left',
     marginBottom: 20,
   },
 
-  description: {
-    fontFamily: 'Ciutadella-Light',
+  subtitle: {
+    fontFamily: 'Ciutadella-SemiBold',
     fontSize: 18,
-    color: '#444',
+    color: '#0e5873',
+    marginBottom: 20,
+  },
+
+  description: {
+    fontFamily: 'Ciutadella-Regular',
+    fontSize: 18,
+    color: '#0e5873',
     textAlign: 'left',
     marginBottom: 44,
   },

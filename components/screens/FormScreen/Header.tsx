@@ -2,8 +2,8 @@ import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Alert, Image } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
-import LogoText from '../../../assets/logo_text.svg';
-import Landskrona from '../../../assets/landskrona.png';
+import LogoImageText from '../../../assets/logo_image_text.svg';
+import LogoText from '../../../assets/logo_text.png';
 
 interface HeaderProps {
   title?: string;
@@ -34,9 +34,9 @@ const Header: React.FC<HeaderProps> = ({ title = '', logo = 'text', handleCloseP
 
   const renderLogo = () => {
     if (logo === 'text') {
-      return <Image source={Landskrona} style={styles.image} resizeMode="contain" />;
+      return <Image source={LogoText} style={styles.image} resizeMode="contain" />;
     }
-    return <LogoText />
+    return <LogoImageText />
   };
 
   return (

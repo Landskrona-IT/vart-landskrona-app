@@ -66,8 +66,8 @@ const WebView: React.FC<WebViewProps> = ({ url }) => {
       key={viewKey}
       ref={webViewRef}
       originWhitelist={['*']}
-      source={{ 
-        uri: url 
+      source={{
+        uri: url
       }}
       javaScriptEnabled
       domStorageEnabled
@@ -75,9 +75,9 @@ const WebView: React.FC<WebViewProps> = ({ url }) => {
       allowFileAccess
       cacheEnabled={false}
       allowsFullscreenVideo
-      style={{ 
-        flex: 1, 
-        backgroundColor: 'transparent', 
+      style={{
+        flex: 1,
+        backgroundColor: '#d9f1f5',
       }}
       onMessage={(event) => handleMessage(event)}
       onLoadEnd={onLoadEnd}

@@ -1,6 +1,5 @@
 import React from 'react';
-import { ImageBackground, View, Text, StyleSheet } from 'react-native';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { ImageBackground, View, StyleSheet } from 'react-native';
 
 import DisturbanceAlert from './DisturbanceAlert';
 
@@ -11,10 +10,8 @@ const HeaderSection: React.FC = () => {
     <View style={styles.container}>
       <ImageBackground source={Background} resizeMode="cover" style={styles.imageBackground}>
         <View style={styles.wrapper}>
-          <View style={styles.banner} />
           <View style={styles.content}>
             <DisturbanceAlert />
-            <Text style={styles.heading}>Vårt {'\n'}Landskrona</Text>
           </View>
         </View>
       </ImageBackground>
@@ -40,11 +37,6 @@ const styles = StyleSheet.create({
     paddingTop: 28,
     paddingBottom: 50,
     paddingHorizontal: 32,
-  },
-  banner: {
-    width: 60,
-    height: '100%',
-    backgroundColor: '#6398AA',
   },
   heading: {
     fontFamily: 'Ciutadella-SemiBold',
