@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
   icon: { marginRight: 12 },
   label: {
     flexWrap: 'wrap',
-    fontFamily: 'Ciutadella-Medium',
+    fontFamily: 'Arial-Medium',
     fontSize: 19,
     letterSpacing: 0.25,
     color: '#000',

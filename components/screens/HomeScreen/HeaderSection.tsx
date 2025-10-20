@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 32,
   },
   heading: {
-    fontFamily: 'Ciutadella-SemiBold',
+    fontFamily: 'Arial-Bold',
     color: '#0e5873',
     textAlign: 'left',
     fontSize: 42,

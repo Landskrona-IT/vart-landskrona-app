@@ -25,10 +25,6 @@
         "ACCESS_FINE_LOCATION",
         "READ_EXTERNAL_STORAGE"
       ],
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#0e5873"
-      },
       "package": "se.landskrona.VartLandskrona"
     },
     "web": {

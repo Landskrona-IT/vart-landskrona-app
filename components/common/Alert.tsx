@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     flexShrink: 1,
   },
   titleText: {
-    fontFamily: 'Ciutadella-Medium',
+    fontFamily: 'Arial-Medium',
     fontSize: 18,
   },
   contentContainer: {

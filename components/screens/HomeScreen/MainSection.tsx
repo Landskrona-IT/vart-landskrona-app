@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
   },
 
   title: {
-    fontFamily: 'Ciutadella-SemiBold',
+    fontFamily: 'Arial-Bold',
     fontSize: 23,
     color: '#0e5873',
     textAlign: 'left',
@@ -38,15 +38,15 @@ const styles = StyleSheet.create({
   },
 
   subtitle: {
-    fontFamily: 'Ciutadella-SemiBold',
+    fontFamily: 'Arial-Bold',
     fontSize: 18,
     color: '#0e5873',
     marginBottom: 20,
   },
 
   description: {
-    fontFamily: 'Ciutadella-Regular',
-    fontSize: 18,
+    fontFamily: 'Arial-Regular',
+    fontSize: 16,
     color: '#0e5873',
     textAlign: 'left',
     marginBottom: 44,
