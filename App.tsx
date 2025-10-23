@@ -12,15 +12,12 @@ SplashScreen.preventAutoHideAsync();
 const App: React.FC = () => {
   const [fontsLoaded] = useFonts({
 
-    'Arial-Bold': require('./assets/fonts/arial/Arial Bold.ttf'),
-    'Arial-Medium': require('./assets/fonts/arial/Arial Medium.ttf'),
-    'Arial-Regular': require('./assets/fonts/arial/Arial Regular.ttf'),
-    'Arial-Light': require('./assets/fonts/arial/Arial Light.ttf'),
+    'MonaSans-Bold': require('./assets/fonts/mona_sans/MonaSans-Bold.ttf'),
+    'MonaSans-Medium': require('./assets/fonts/mona_sans/MonaSans-Medium.ttf'),
+    'MonaSans-Regular': require('./assets/fonts/mona_sans/MonaSans-Regular.ttf'),
+    'MonaSans-Light': require('./assets/fonts/mona_sans/MonaSans-Light.ttf'),
 
-    'Roboto-Light': require('./assets/fonts/roboto/Roboto-Light.ttf'),
     'Roboto-Regular': require('./assets/fonts/roboto/Roboto-Regular.ttf'),
-    'Roboto-Medium': require('./assets/fonts/roboto/Roboto-Medium.ttf'),
-    'Roboto-Bold': require('./assets/fonts/roboto/Roboto-Bold.ttf'),
   });
 
   const onLayoutRootView = useCallback(async () => {

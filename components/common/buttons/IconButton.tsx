@@ -40,14 +40,14 @@ const styles = StyleSheet.create({
   icon: { marginRight: 12 },
   label: {
     flexWrap: 'wrap',
-    fontFamily: 'Arial-Medium',
+    fontFamily: 'MonaSans-Medium',
     fontSize: 19,
     letterSpacing: 0.25,
     color: '#000',
   },
   description: {
     flexShrink: 1,
-    fontFamily: 'Roboto-Regular',
+    fontFamily: 'MonaSans-Regular',
     fontSize: 15,
     color: '#000',
   },

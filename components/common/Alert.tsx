@@ -38,12 +38,12 @@ const styles = StyleSheet.create({
     flexShrink: 1,
   },
   titleText: {
-    fontFamily: 'Arial-Medium',
+    fontFamily: 'MonaSans-Medium',
     fontSize: 18,
   },
   contentContainer: {
     flexShrink: 1,
-    fontFamily: 'Roboto-Regular',
+    fontFamily: 'MonaSans-Regular',
   },
 });
 

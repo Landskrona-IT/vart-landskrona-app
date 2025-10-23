@@ -30,26 +30,26 @@ const styles = StyleSheet.create({
   },
 
   title: {
-    fontFamily: 'Arial-Bold',
+    fontFamily: 'MonaSans-Bold',
     fontSize: 23,
     color: '#0e5873',
     textAlign: 'left',
-    marginBottom: 20,
+    marginBottom: 10,
   },
 
   subtitle: {
-    fontFamily: 'Arial-Bold',
+    fontFamily: 'MonaSans-Bold',
     fontSize: 18,
     color: '#0e5873',
-    marginBottom: 20,
+    marginBottom: 10,
   },
 
   description: {
-    fontFamily: 'Arial-Regular',
+    fontFamily: 'MonaSans-Regular',
     fontSize: 16,
     color: '#0e5873',
     textAlign: 'left',
-    marginBottom: 44,
+    marginBottom: 30,
   },
 });
 

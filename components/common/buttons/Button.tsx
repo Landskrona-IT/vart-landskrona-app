@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#63a0b7',
   },
   label: {
-    fontFamily: 'Arial-Medium',
+    fontFamily: 'MonaSans-Medium',
     fontSize: 18,
     color: '#fff',
   },
