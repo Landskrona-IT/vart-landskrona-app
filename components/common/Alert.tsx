@@ -40,10 +40,12 @@ const styles = StyleSheet.create({
   titleText: {
     fontFamily: 'MonaSans-Medium',
     fontSize: 18,
+    letterSpacing: -0.7,
   },
   contentContainer: {
     flexShrink: 1,
     fontFamily: 'MonaSans-Regular',
+    letterSpacing: -0.7,
   },
 });
 

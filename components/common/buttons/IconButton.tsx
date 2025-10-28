@@ -42,14 +42,15 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     fontFamily: 'MonaSans-Medium',
     fontSize: 19,
-    letterSpacing: 0.25,
     color: '#000',
+    letterSpacing: -0.7,
   },
   description: {
     flexShrink: 1,
     fontFamily: 'MonaSans-Regular',
     fontSize: 15,
     color: '#000',
+    letterSpacing: -0.7,
   },
 });
 

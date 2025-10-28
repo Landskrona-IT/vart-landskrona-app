@@ -77,7 +77,7 @@ const WebView: React.FC<WebViewProps> = ({ url }) => {
       allowsFullscreenVideo
       style={{
         flex: 1,
-        backgroundColor: '#d9f1f5',
+        backgroundColor: '#F4F0E9',
       }}
       onMessage={(event) => handleMessage(event)}
       onLoadEnd={onLoadEnd}

@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
   button: {
     borderRadius: 16,
     backgroundColor: '#0e5873',
-    padding: 16,
+    padding: 14,
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -29,9 +29,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#63a0b7',
   },
   label: {
-    fontFamily: 'MonaSans-Medium',
+    fontFamily: 'MonaSans-Bold',
     fontSize: 18,
+    verticalAlign: 'middle',
     color: '#fff',
+    letterSpacing: -0.7,
   },
 });
 

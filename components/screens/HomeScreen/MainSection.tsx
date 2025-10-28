@@ -7,7 +7,7 @@ const MainSection = ({ navigation }) => {
     <View style={styles.wrapper}>
       <View style={styles.card}>
         <Text style={styles.title}>Välkommen till Vårt Landskrona</Text>
-        <Text style={styles.subtitle}>Lämna en felanmälan eller synpunkt</Text>
+        <Text style={styles.subtitle}>Lämna en felanmälan eller synpunkt om stadsmiljön</Text>
         <Text style={styles.description}>Hjälp oss att hålla staden hel och ren.</Text>
         <Button onPress={() => navigation.navigate('Form')} label="Skapa ett ärende" />
       </View>
@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     flex: 2,
     justifyContent: 'center',
     alignItems: 'center',
-    padding: 26,
+    padding: 15,
     backgroundColor: '#D9F0F4',
   },
 
@@ -31,17 +31,19 @@ const styles = StyleSheet.create({
 
   title: {
     fontFamily: 'MonaSans-Bold',
-    fontSize: 23,
+    fontSize: 20,
     color: '#0e5873',
     textAlign: 'left',
     marginBottom: 10,
+    letterSpacing: -0.7,
   },
 
   subtitle: {
     fontFamily: 'MonaSans-Bold',
-    fontSize: 18,
+    fontSize: 16,
     color: '#0e5873',
     marginBottom: 10,
+    letterSpacing: -0.7,
   },
 
   description: {
@@ -50,6 +52,7 @@ const styles = StyleSheet.create({
     color: '#0e5873',
     textAlign: 'left',
     marginBottom: 30,
+    letterSpacing: -0.7,
   },
 });
 
