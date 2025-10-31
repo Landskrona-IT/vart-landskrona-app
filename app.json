@@ -28,7 +28,11 @@
         "ACCESS_FINE_LOCATION",
         "READ_EXTERNAL_STORAGE"
       ],
-      "package": "se.landskrona.VartLandskrona"
+      "package": "se.landskrona.VartLandskrona",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#0e5873"
+      }
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -45,7 +49,8 @@
         {
           "backgroundColor": "#0e5873",
           "image": "./assets/splash.png",
-          "imageWidth": 200
+          "imageWidth": 140,
+          "resizeMode": "contain"
         }
       ],
       "expo-asset"
