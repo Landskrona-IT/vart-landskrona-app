@@ -5,6 +5,7 @@ import FocusAwareStatusBar from '../components/common/StatusBar';
 import HeaderSection from '../components/screens/HomeScreen/HeaderSection';
 import MainSection from '../components/screens/HomeScreen/MainSection';
 import { HomeScreenNavigationProps } from '../types/Types';
+import { ScrollView } from 'react-native';
 
 const HomeScreen: React.FC<HomeScreenNavigationProps> = ({ navigation }) => {
   return (
@@ -13,6 +14,7 @@ const HomeScreen: React.FC<HomeScreenNavigationProps> = ({ navigation }) => {
       <HeaderSection />
       <MainSection navigation={navigation} />
     </Container>
+
   );
 };
 

@@ -1,16 +1,24 @@
-import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import Button from '../../common/buttons/Button';
 
 const MainSection = ({ navigation }) => {
+  const [wrapperMinHeight, setWrapperMinHeight] = useState(null);
+
+
   return (
-    <View style={styles.wrapper}>
-      <View style={styles.card}>
-        <Text style={styles.title}>Välkommen till Vårt Landskrona</Text>
-        <Text style={styles.subtitle}>Lämna en felanmälan eller synpunkt om stadsmiljön</Text>
-        <Text style={styles.description}>Hjälp oss att hålla staden hel och ren.</Text>
-        <Button onPress={() => navigation.navigate('Form')} label="Skapa ett ärende" />
-      </View>
+    <View style={{...styles.wrapper, minHeight: wrapperMinHeight}}  onLayout={(event) => {
+      const { height } = event.nativeEvent.layout;
+      if (height < 250 ) {
+        setWrapperMinHeight(100);
+      }
+    }}>
+        <View style={styles.card}>
+          <Text style={styles.title}>Välkommen till Vårt Landskrona</Text>
+          <Text style={styles.subtitle}>Lämna en felanmälan eller synpunkt om stadsmiljön</Text>
+          <Text style={styles.description}>Hjälp oss att hålla staden hel och ren.</Text>
+          <Button onPress={() => navigation.navigate('Form')} label="Skapa ett ärende" />
+        </View>
     </View>
   );
 };

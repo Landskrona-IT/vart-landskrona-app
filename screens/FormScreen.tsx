@@ -5,6 +5,7 @@ import FocusAwareStatusBar from '../components/common/StatusBar';
 import FormNavigation from '../components/screens/FormScreen/FormNavigation';
 import WebView from '../components/screens/FormScreen/WebView/WebView';
 import { HomeScreenNavigationProps } from '../types/Types';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 const FormScreen: React.FC<HomeScreenNavigationProps> = ({ navigation }) => {
   return (
