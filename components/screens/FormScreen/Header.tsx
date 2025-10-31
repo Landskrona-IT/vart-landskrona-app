@@ -63,8 +63,8 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     paddingHorizontal: 16,
-    paddingBottom: 15,
-    height: 65,
+    paddingBottom: 10,
+    minHeight: 75,
   },
   image: {
     width: 137,

@@ -10,7 +10,7 @@ import AppNavigator from './navigation/AppNavigator';
 SplashScreen.preventAutoHideAsync();
 
 const App: React.FC = () => {
-  const [fontsLoaded, fontError] = useFonts({
+  const [fontsLoaded] = useFonts({
 
     'MonaSans-Bold': require('./assets/fonts/mona_sans/MonaSans-Bold.ttf'),
     'MonaSans-Medium': require('./assets/fonts/mona_sans/MonaSans-Medium.ttf'),
@@ -22,12 +22,10 @@ const App: React.FC = () => {
 
   const onLayoutRootView = useCallback(async () => {
     if (fontsLoaded) {
-      console.log("Fonts loaded...")
       await SplashScreen.hideAsync();
     }
   }, [fontsLoaded]);
 
-  console.log("fonts loaded?", fontsLoaded, fontError);
 
   if (!fontsLoaded) {
     return null;
