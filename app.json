@@ -2,19 +2,22 @@
   "expo": {
     "name": "Vårt Landskrona",
     "slug": "vart-landskrona",
-    "version": "2.0.4",
-    "owner": "landskrona",
+    "version": "1.0.0",
+    "owner": "landskrona-kommun",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.landskrona.vartlandskrona",
       "buildNumber": "1",
       "infoPlist": {
         "NSCameraUsageDescription": "Denna app behöver åtkomst till kameran för att kunna ladda upp bilder till ärenden.",
-        "NSLocationWhenInUseUsageDescription": "Denna app behöver åtkomst till din plats för att visa din plats på karta."
+        "NSLocationWhenInUseUsageDescription": "Denna app behöver åtkomst till din plats för att visa din plats på karta.",
+        "ITSAppUsesNonExemptEncryption": false
       }
     },
     "android": {
@@ -30,14 +33,22 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "plugins": ["expo-font",
-        ["expo-splash-screen",
+    "extra": {
+      "eas": {
+        "projectId": "a3960895-02ad-4b6f-b315-253739b09df0"
+      }
+    },
+    "plugins": [
+      "expo-font",
+      [
+        "expo-splash-screen",
         {
           "backgroundColor": "#0e5873",
           "image": "./assets/splash.png",
           "imageWidth": 200
         }
-      ]
+      ],
+      "expo-asset"
     ]
   }
 }
