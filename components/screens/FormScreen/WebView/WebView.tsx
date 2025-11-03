@@ -12,21 +12,54 @@ const WebView: React.FC<WebViewProps> = ({ url }) => {
   const { viewKey, webViewRef, updateCurrentStep, updateIsSubmitted } = useWebView();
 
   const injectedJavaScript = `
-    var formsApi = window.limeForms.getApi();
-    formsApi.onStepChange((from,to) => {
-      const navObject = { from, to };
-      const message = JSON.stringify(navObject);
-      window.ReactNativeWebView.postMessage(message);
-    });
+  (function() {
+    let attempts = 0;
+    const maxAttempts = 10;
 
-    formsApi.onSubmitted(() => {
-      const navObject = { submitted: true };
-      const message = JSON.stringify(navObject);
-      window.ReactNativeWebView.postMessage(message);
-    });
+    function tryInit() {
+      attempts++;
 
+      if (window.limeForms && typeof window.limeForms.getApi === 'function') {
+        try {
+          var formsApi = window.limeForms.getApi();
+          console.log('[Injected] forms API Found!');
+
+          formsApi.onStepChange((from, to) => {
+            const navObject = { from, to };
+            window.ReactNativeWebView.postMessage(JSON.stringify(navObject));
+          });
+
+          formsApi.onSubmitted(() => {
+            const navObject = { submitted: true };
+            window.ReactNativeWebView.postMessage(JSON.stringify(navObject));
+          });
+
+          console.log('[Injected] limeForms API initialized');
+        } catch (err) {
+          console.log('[Injected] Error initializing formsApi:', err);
+          if (attempts < maxAttempts) {
+            setTimeout(tryInit, 500);
+          } else {
+            console.log('[Injected] Gave up after', attempts, 'attempts');
+          }
+        }
+      } else {
+        if (attempts < maxAttempts) {
+          console.log('[Injected] limeForms not ready, retrying...', attempts);
+          setTimeout(tryInit, 500);
+        } else {
+          console.log('[Injected] Gave up after', attempts, 'attempts');
+        }
+      }
+    }
+
+    tryInit();
     true;
-  `;
+  })();
+`;
+
+
+
 
   const handleMessage = (event: { nativeEvent: { data: string } }) => {
     const message = event.nativeEvent.data;
@@ -73,11 +106,23 @@ const WebView: React.FC<WebViewProps> = ({ url }) => {
       domStorageEnabled
       geolocationEnabled
       allowFileAccess
+      allowUniversalAccessFromFileURLs
       cacheEnabled={false}
       allowsFullscreenVideo
+      useWebView2={true}
       style={{
         flex: 1,
         backgroundColor: '#F4F0E9',
+      }}
+      onError={(syntheticEvent) => {
+        const { nativeEvent } = syntheticEvent;
+        console.warn('WebView error: ', nativeEvent);
+      }}
+      onHttpError={(syntheticEvent) => {
+        const { nativeEvent } = syntheticEvent;
+        console.warn(
+          `HTTP error: ${nativeEvent.statusCode} on ${nativeEvent.url}`
+        );
       }}
       onMessage={(event) => handleMessage(event)}
       onLoadEnd={onLoadEnd}
