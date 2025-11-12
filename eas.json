@@ -30,7 +30,8 @@
   "submit": {
     "production": {
       "ios": {
-        "ascAppId": "6755191404"
+        "ascAppId": "6755191404",
+        "bundleIdentifier": "com.landskrona.vartlandskrona"
       }
     }
   }
