@@ -4,6 +4,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import LogoImageText from '../../../assets/logo_image_text.svg';
 import LogoText from '../../../assets/logo_text.png';
+import { HeaderHeightContext } from 'react-native-screens/native-stack';
 
 interface HeaderProps {
   title?: string;
@@ -14,7 +15,6 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ title = '', logo = 'text', handleClosePress, showClosePress = true }) => {
   const insets = useSafeAreaInsets();
-
   const showExitAlert = () => {
     Alert.alert(
       "Är du säker på att du vill avsluta?",
@@ -40,16 +40,23 @@ const Header: React.FC<HeaderProps> = ({ title = '', logo = 'text', handleCloseP
   };
 
   return (
-    <View style={{ ...styles.container, paddingTop: insets.top }}>
-      <View style={styles.header}>
-        {renderLogo()}
-        {showClosePress && (
-          <TouchableOpacity onPress={showExitAlert} style={styles.button}>
-            <Text style={styles.buttonText}>Avbryt</Text>
-          </TouchableOpacity>
-        )}
+    <HeaderHeightContext.Consumer>
+      {(headerHeight) => {
+        console.log("headerHeight", headerHeight);
+       return (
+      <View style={{ ...styles.container, paddingTop: insets.top }}>
+        <View style={styles.header}>
+          {renderLogo()}
+          {showClosePress && (
+            <TouchableOpacity onPress={showExitAlert} style={styles.button}>
+              <Text style={styles.buttonText}>Avbryt</Text>
+            </TouchableOpacity>
+          )}
+        </View>
       </View>
-    </View>
+       )
+      }}
+    </HeaderHeightContext.Consumer>
   );
 };
 
@@ -63,8 +70,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     paddingHorizontal: 16,
-    paddingBottom: 10,
-    minHeight: 75,
+    paddingBottom: 16,
   },
   image: {
     width: 137,
