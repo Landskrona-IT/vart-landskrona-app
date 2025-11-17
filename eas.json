@@ -29,6 +29,10 @@
   },
   "submit": {
     "production": {
+      "android": {
+        "releaseStatus": "completed",
+        "track": "beta"
+      },
       "ios": {
         "ascAppId": "6755191404",
         "bundleIdentifier": "com.landskrona.vartlandskrona"
