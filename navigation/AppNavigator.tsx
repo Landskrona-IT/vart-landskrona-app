@@ -107,7 +107,7 @@ const styles = StyleSheet.create({
     maxHeight: '100%',
     width: 137,
     paddingVertical: 3,
-    marginBottom: 8
+    marginBottom: 12,
   },
   logoImage: {
     width: 137,
