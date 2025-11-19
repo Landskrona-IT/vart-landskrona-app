@@ -22,6 +22,7 @@
       }
     },
     "production": {
+      "autoIncrement": true,
       "env": {
         "EXPO_PUBLIC_WEBVIEW_URL": "https://vartlandskronazqgwfb34-vart-landskrona-web.functions.fnc.pl-waw.scw.cloud/?formIdApp=DI6su97z1SAALJXZBxYA&app=1"
       }
