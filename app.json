@@ -18,7 +18,8 @@
         "NSCameraUsageDescription": "Denna app behöver åtkomst till kameran för att kunna ladda upp bilder till ärenden.",
         "NSLocationWhenInUseUsageDescription": "Denna app behöver åtkomst till din plats för att visa din plats på karta.",
         "ITSAppUsesNonExemptEncryption": false
-      }
+      },
+      "icon": "./assets/icon.png"
     },
     "android": {
       "versionCode": 1,
@@ -29,8 +30,9 @@
         "READ_EXTERNAL_STORAGE"
       ],
       "package": "se.landskrona.VartLandskrona",
+      "icon": "./assets/icon.png",
       "adaptiveIcon": {
-        "foregroundImage": "./assets/icon.png",
+        "foregroundImage": "./assets/adaptive_icon.png",
         "backgroundColor": "#0e5873"
       }
     },

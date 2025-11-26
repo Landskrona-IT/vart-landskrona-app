@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
     flex: 2,
     justifyContent: 'center',
     alignItems: 'center',
-    padding: 15,
+    padding: 6,
     backgroundColor: '#D9F0F4',
   },
 
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
 
   title: {
     fontFamily: 'MonaSans-Bold',
-    fontSize: 20,
+    fontSize: 18,
     color: '#0e5873',
     textAlign: 'left',
     marginBottom: 10,
