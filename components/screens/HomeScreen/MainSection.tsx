@@ -1,59 +1,45 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import Button from '../../common/buttons/Button';
 
 const MainSection = ({ navigation }) => {
-  const [wrapperMinHeight, setWrapperMinHeight] = useState(null);
-
-
   return (
-    <View style={{...styles.wrapper, minHeight: wrapperMinHeight}}  onLayout={(event) => {
-      const { height } = event.nativeEvent.layout;
-      if (height < 250 ) {
-        setWrapperMinHeight(100);
-      }
-    }}>
-        <View style={styles.card}>
-          <Text style={styles.title}>Välkommen till Vårt Landskrona</Text>
-          <Text style={styles.subtitle}>Lämna en felanmälan eller synpunkt om stadsmiljön</Text>
-          <Text style={styles.description}>Hjälp oss att hålla staden hel och ren.</Text>
-          <Button onPress={() => navigation.navigate('Form')} label="Skapa ett ärende" />
-        </View>
+    <View style={styles.wrapper}>
+      <ScrollView contentContainerStyle={styles.scroll}>
+        <Text style={styles.title}>Välkommen till Vårt Landskrona</Text>
+        <Text style={styles.subtitle}>Lämna en felanmälan eller synpunkt om stadsmiljön</Text>
+        <Text style={styles.description}>Hjälp oss att hålla staden hel och ren.</Text>
+        <Button onPress={() => navigation.navigate('Form')} label="Skapa ett ärende" />
+      </ScrollView>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   wrapper: {
-    flex: 2,
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: 6,
+    flexShrink: 0,
+    padding: 32,
     backgroundColor: '#D9F0F4',
+    alignItems: 'center',
   },
-
-  card: {
-    width: '80%',
-    maxWidth: 900,
+  scroll: {
+    width: '100%',
   },
-
   title: {
     fontFamily: 'MonaSans-Bold',
-    fontSize: 18,
+    fontSize: 22,
     color: '#0e5873',
     textAlign: 'left',
     marginBottom: 10,
     letterSpacing: -0.7,
   },
-
   subtitle: {
-    fontFamily: 'MonaSans-Bold',
+    fontFamily: 'MonaSans-Medium',
     fontSize: 16,
     color: '#0e5873',
     marginBottom: 10,
     letterSpacing: -0.7,
   },
-
   description: {
     fontFamily: 'MonaSans-Regular',
     fontSize: 16,

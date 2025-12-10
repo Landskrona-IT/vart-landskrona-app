@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Container from '../components/common/Container';
 import FocusAwareStatusBar from '../components/common/StatusBar';
 import HeaderSection from '../components/screens/HomeScreen/HeaderSection';
@@ -13,8 +12,8 @@ const HomeScreen: React.FC<HomeScreenNavigationProps> = ({ navigation }) => {
       <HeaderSection />
       <MainSection navigation={navigation} />
     </Container>
-
   );
 };
+
 
 export default HomeScreen;

@@ -1,7 +1,6 @@
 import React from 'react';
 import { ImageBackground, View, StyleSheet } from 'react-native';
-
-import Background  from '../../../assets/images/home_screen_bg.webp';
+import Background from '../../../assets/images/home_screen_bg.webp';
 
 const HeaderSection: React.FC = () => {
   return (
@@ -13,8 +12,8 @@ const HeaderSection: React.FC = () => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 3,
-
+    flexShrink: 1,
+    flexGrow: 1,
   },
   imageBackground: {
     width: '100%',
