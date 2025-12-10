@@ -15,6 +15,8 @@
       "bundleIdentifier": "com.landskrona.vartlandskrona",
       "buildNumber": "1",
       "infoPlist": {
+        "CFBundleDevelopmentRegion": "sv",
+        "CFBundleLocalizations": ["sv"],
         "NSCameraUsageDescription": "Denna app behöver åtkomst till kameran för att kunna ladda upp bilder till ärenden.",
         "NSLocationWhenInUseUsageDescription": "Denna app behöver åtkomst till din plats för att visa din plats på karta.",
         "ITSAppUsesNonExemptEncryption": false
