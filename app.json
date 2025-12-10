@@ -2,7 +2,7 @@
   "expo": {
     "name": "Vårt Landskrona",
     "slug": "vart-landskrona",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "owner": "landskrona-kommun",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
