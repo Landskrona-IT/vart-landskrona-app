@@ -18,7 +18,8 @@ const MainSection = ({ navigation }) => {
 const styles = StyleSheet.create({
   wrapper: {
     flexShrink: 0,
-    padding: 32,
+    paddingVertical: 30,
+    paddingHorizontal: 26,
     backgroundColor: '#D9F0F4',
     alignItems: 'center',
   },
@@ -27,7 +28,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontFamily: 'MonaSans-Bold',
-    fontSize: 22,
+    fontSize: 19,
     color: '#0e5873',
     textAlign: 'left',
     marginBottom: 10,
